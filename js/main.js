@@ -15,4 +15,8 @@ $(document).ready(function() {
             verticalFit: true
         }
     });
+	
+	$('#downloadBtn').on('click', function() {
+		ga('send', 'event', 'button', 'click', 'downloadBtn_chrome');
+	});
 });
