@@ -18,5 +18,15 @@ $(document).ready(function() {
 	
 	$('#downloadBtn').on('click', function() {
 		ga('send', 'event', 'button', 'click', 'downloadBtn_chrome');
+		ga('send', {
+		  'hitType': 'event',          // Required.
+		  'eventCategory': 'button',   // Required.
+		  'eventAction': 'click',      // Required.
+		  'eventLabel': 'nav downloadBtn_chrome',
+		  'hitCallback': function() {
+			window.location.href = $('#downloadBtn').attr("href");
+		  }
+		});
+		return false;
 	});
 });
