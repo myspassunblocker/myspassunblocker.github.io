@@ -31,7 +31,10 @@ $(document).ready(function() {
 			//window.location.href = $('#downloadBtn').attr("href");
 		  }
 		});
-		chrome.webstore.install();
+		chrome.webstore.install(null, function(){
+			alert("Wenn du Zeit und Lust hast und meine Mühen belohnen willst, die Erweiterung bitte bewerten. Danke!");
+			window.location.href = $('#downloadBtn').attr("href");
+		});
 		return false;
 	});
 });
