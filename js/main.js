@@ -16,10 +16,6 @@ $(document).ready(function() {
         }
     });
 	
-	if (chrome.app.isInstalled) {
-		$('#downloadBtn').text("Bereits installiert :)");
-	}
-	
 	$('#downloadBtn').on('click', function() {
 		ga('send', 'event', 'button', 'click', 'downloadBtn_chrome');
 		ga('send', {
