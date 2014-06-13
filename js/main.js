@@ -16,6 +16,10 @@ $(document).ready(function() {
         }
     });
 	
+	if (chrome.app.isInstalled) {
+		$('#downloadBtn').text("Bereits installiert :)");
+	}
+	
 	$('#downloadBtn').on('click', function() {
 		ga('send', 'event', 'button', 'click', 'downloadBtn_chrome');
 		ga('send', {
@@ -24,9 +28,10 @@ $(document).ready(function() {
 		  'eventAction': 'click',      // Required.
 		  'eventLabel': 'nav downloadBtn_chrome',
 		  'hitCallback': function() {
-			window.location.href = $('#downloadBtn').attr("href");
+			//window.location.href = $('#downloadBtn').attr("href");
 		  }
 		});
+		chrome.webstore.install();
 		return false;
 	});
 });
