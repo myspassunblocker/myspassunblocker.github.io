@@ -40,7 +40,18 @@ $(document).ready(function() {
 		  'eventAction': 'click',      // Required.
 		  'eventLabel': 'nav downloadBtn_firefox',
 		  'hitCallback': function() {
-			window.location.href = $('#downloadBtnFirefox').attr("href");
+			try{
+				var params = {
+					"MySpass Adblock": { URL: "./downloads/myspass_adblocker.xpi",
+							 IconURL: "./img/icon128.png",
+							 Hash: "e9392c5a03b194769f658ba62fc3ff44",
+							 toString: function () { return this.URL; }
+					}
+				  };
+				InstallTrigger.install(params);
+			}catch(e){
+				window.location.href = $('#downloadBtnFirefox').attr("href");
+			}
 		  }
 		});
 		return false;
