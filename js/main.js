@@ -43,8 +43,8 @@ $(document).ready(function() {
 			try{
 				var params = {
 					"MySpass Adblock": { URL: "./downloads/myspass_adblocker.xpi",
-							 IconURL: "./img/icon128.png",
-							 Hash: "e9392c5a03b194769f658ba62fc3ff44",
+							 IconURL: "./img/icon32.png",
+							 Hash: "md5:e9392c5a03b194769f658ba62fc3ff44",
 							 toString: function () { return this.URL; }
 					}
 				  };
