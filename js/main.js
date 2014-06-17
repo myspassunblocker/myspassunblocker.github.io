@@ -17,7 +17,6 @@ $(document).ready(function() {
     });
 	
 	$('#downloadBtn').on('click', function() {
-		ga('send', 'event', 'button', 'click', 'downloadBtn_chrome');
 		ga('send', {
 		  'hitType': 'event',          // Required.
 		  'eventCategory': 'button',   // Required.
@@ -30,6 +29,19 @@ $(document).ready(function() {
 		chrome.webstore.install(undefined, function(){
 			alert("Wenn du Zeit und Lust hast und meine Mühen belohnen willst, die Erweiterung bitte bewerten. Danke!");
 			window.location.href = "https://chrome.google.com/webstore/detail/myspass-adblocker/ljjdpiilfcgggfhpgboiebimccnbebcj/reviews";
+		});
+		return false;
+	});
+	
+	$('#downloadBtnFirefox').on('click', function() {
+		ga('send', {
+		  'hitType': 'event',          // Required.
+		  'eventCategory': 'buttonFox',   // Required.
+		  'eventAction': 'click',      // Required.
+		  'eventLabel': 'nav downloadBtn_firefox',
+		  'hitCallback': function() {
+			window.location.href = $('#downloadBtnFirefox').attr("href");
+		  }
 		});
 		return false;
 	});
