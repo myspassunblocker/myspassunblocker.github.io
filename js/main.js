@@ -56,4 +56,17 @@ $(document).ready(function() {
 		});
 		return false;
 	});
+	
+	$('#downloadBtnSafari').on('click', function() {
+		ga('send', {
+		  'hitType': 'event',          // Required.
+		  'eventCategory': 'buttonSafari',   // Required.
+		  'eventAction': 'click',      // Required.
+		  'eventLabel': 'nav downloadBtn_safari',
+		  'hitCallback': function() {
+			window.location.href = $('#downloadBtnSafari').attr("href");
+		  }
+		});
+		return false;
+	});
 });
