@@ -54,7 +54,7 @@ $(document).ready(function() {
 			}*/
 		  }
 		});
-		alert("Sie werden auf die Firefox Addon Seite weitergeleitet, dort können Sie die Erweiterung bequem herunterladen. Sollte Ihnen die Erweiterung gefallen, würde ich mich freuen wenn sie meine Mühen belohnen würden und die Erweiterung bewerten. Danke!");
+		alert("Sie werden auf die Firefox Addon Seite weitergeleitet, dort können Sie die Erweiterung bequem herunterladen.\nSollte Ihnen die Erweiterung gefallen, würde ich mich freuen wenn sie meine Mühen belohnen würden und die Erweiterung bewerten.\nDanke!");
 		window.location.href = "https://addons.mozilla.org/de/firefox/addon/myspass-adblocker/";
 		return false;
 	});
