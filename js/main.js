@@ -40,7 +40,7 @@ $(document).ready(function() {
 		  'eventAction': 'click',      // Required.
 		  'eventLabel': 'nav downloadBtn_firefox',
 		  'hitCallback': function() {
-			try{
+			/*try{
 				var params = {
 					"MySpass Adblock": { URL: "./downloads/myspass_adblocker.xpi",
 							 IconURL: "./img/icon32.png",
@@ -51,9 +51,11 @@ $(document).ready(function() {
 				InstallTrigger.install(params);
 			}catch(e){
 				window.location.href = $('#downloadBtnFirefox').attr("href");
-			}
+			}*/
 		  }
 		});
+		alert("Sie werden auf die Firefox Addon Seite weitergeleitet, dort können Sie die Erweiterung bequem herunterladen. Sollte Ihnen die Erweiterung gefallen, würde ich mich freuen wenn sie meine Mühen belohnen würden und die Erweiterung bewerten. Danke!");
+		window.location.href = "https://addons.mozilla.org/de/firefox/addon/myspass-adblocker/";
 		return false;
 	});
 	
